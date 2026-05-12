@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Header(){
     return (
     <header>
@@ -6,11 +8,11 @@ function Header(){
     </div>
     <nav className="menu">
     <ul>
-    <li>Home</li>
-    <li>Sobre o Curso</li>
-    <li>Disciplina Curriculares</li>
-    <li>Disciplina Técnicas</li>
-    <li>Equipe</li>
+    <li><Link to = "/">home</Link></li>
+    <li><Link to = "/SobreCurso">sobre o curso</Link></li>
+    <li><Link to = "/disciplinasCurriculares">Disciplinas Curriculares</Link></li>
+    <li><Link to = "/disciplinasTecnicas">Disciplinas Técnicas</Link></li>
+    <li><Link to = "/Equipe">equipe</Link></li>
     </ul>
     </nav>
     </header>

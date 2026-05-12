@@ -1,11 +1,13 @@
+import { Link } from "react-router-dom"
 function Footer(){
     return (
     <footer>
     <div className="menuFooter">
     <ul>
-    <li>Sobre o Curso</li>
-    <li>Disciplina Curriculares</li>
-    <li>Disciplina Técnicas</li>
+    <li><Link to = "/SobreCurso">sobre o curso</Link></li>
+    <li><Link to = "/disciplinasCurriculares">Disciplinas Curriculares</Link></li>
+    <li><Link to = "/disciplinasTecnicas">Disciplinas Técnicas</Link></li>
+    <li><Link to = "/Equipe">equipe</Link></li>
     </ul>
     <li>Equipe</li>
     </div>
