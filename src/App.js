@@ -1,34 +1,38 @@
-import { BrowserRouter, Routes, Route} from "react-router-dom";
-import Header from "./componentes/Header"; ".Componentes/Header";
-import Main from "./componentes/Main";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+
+import Header from "./componentes/Header"; 
 import Footer from "./componentes/Footer";
-import SobreCurso from "./componentes/SobreCurso";
+import Main from "./componentes/Main";
+
+import Erro from './componentes/Equipe';
+import Equipe from './componentes/Equipe';
+
+import DisciplinasCurriculares from './componentes/DisciplinasCurriculares';
 import DisciplinasTecnicas from "./componentes/DisciplinasTecnicas";
-import DisciplinasCurriculares from "./componentes/DisciplinasCurriculares";
-import listarDisciplinasCurriculares from "./componentes/listarDisciplinasCurriculares";
-import listarDisciplinasTecnicas from "./componentes/listarDisciplinasTecnicas";
-import erro from "./componentes/Erro";
-import Equipe from "./componentes/Equipe";
-import SobreCursov from "./componentes/SobreCurso";
+
+import ListarDisciplinaCurricular from './componentes/ListarDisciplinasCurriculares';
+import ListarDisciplinaTecnica from './componentes/ListarDisciplinasTecnicas';
+import SobreCurso from "./componentes/SobreCurso";
+
 function App() {
   return (
     <BrowserRouter>
       <>
         <Header />
-        <routes>
-          <route path="*" element={<erro />} />
-          <route path="/" element={<main />} />
-          <route path="/sobreCurso" element={<SobreCurso />} />
-          <route path="/disciplinasTecnicas" element={<disciplinasTecnicas />} />
-          <route path="/DisciplinasCurriculares" element={<disciplinasCurriculares />} />
+        <Routes>
+          <Route path= "*" element = {<Erro />} />
+          <Route path= "/" element = {<Main />} />
+          <Route path= "/sobreCurso" element = {<SobreCurso />} />
+          <Route path= "/disciplinasTecnicas" element = {<DisciplinasTecnicas />} />
+          <Route path= "/disciplinasCurriculares" element = {<DisciplinasCurriculares />} />
 
-          <route path="/DisciplinaTecnica/:id" element={<disciplinaTecnica />} />
-          <route path="/DisciplinaCurricular/:id" element={<disciplinaCurricular />} />
+          <Route path = "/disciplinasTecnicas/id:" element = {<ListarDisciplinaTecnica />}  />
+          <Route path = "/disciplinasCurriculares/id:" element = {<ListarDisciplinaCurricular />}  />
+      
+          <Route path = "/equipe" element = {<Equipe />} />
 
-          <route path="//equipe" element={<Equipe />} />
-        </routes>
+        </Routes>
         <Footer />
-
       </>
     </BrowserRouter>
   );

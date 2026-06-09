@@ -25,10 +25,19 @@ header .headerMenu ul{
   gap: 5%
 }
 
-header .headerMenu il{
+header .headerMenu li{
 font-size: 25px;
 }
 
+header .headerMenu li a{
+  color:blue;
+  cursor: pointer;
+}
+
+header .headerMenu li a:hover{
+  color: red;
+
+}
 /*footer*/
 footer{
   width:100%;
@@ -51,6 +60,9 @@ footer .menuFooter li{
   height: 25px;
 }
 
+
+/**************************************/
+foot
 Footer .credenciais{
   width:80%;
   text-align: center;
