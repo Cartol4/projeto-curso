@@ -1,39 +1,30 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-import Header from "./componentes/Header"; 
-import Footer from "./componentes/Footer";
-import Main from "./componentes/Main";
+import Header from './componentes/Header';
+import Footer from './componentes/Footer';
 
-import Erro from './componentes/Equipe';
-import Equipe from './componentes/Equipe';
-
-import DisciplinasCurriculares from './componentes/DisciplinasCurriculares';
-import DisciplinasTecnicas from "./componentes/DisciplinasTecnicas";
-
-import ListarDisciplinaCurricular from './componentes/ListarDisciplinasCurriculares';
-import ListarDisciplinaTecnica from './componentes/ListarDisciplinasTecnicas';
-import SobreCurso from "./componentes/SobreCurso";
+import Home from './paginas/Home'
+import Contato from './paginas/Contato'
+import Sobre from './paginas/Sobre'
+import ListarTarefas from './paginas/ListarTarefas';
+import ListarUmaTarefa from './paginas/ListarUmaTarefa';
+import CadastrarTarefa from './paginas/CadastrarTarefa';
 
 function App() {
   return (
     <BrowserRouter>
-      <>
-        <Header />
+      <Header />
+      <main>
         <Routes>
-          <Route path= "*" element = {<Erro />} />
-          <Route path= "/" element = {<Main />} />
-          <Route path= "/sobreCurso" element = {<SobreCurso />} />
-          <Route path= "/disciplinasTecnicas" element = {<DisciplinasTecnicas />} />
-          <Route path= "/disciplinasCurriculares" element = {<DisciplinasCurriculares />} />
-
-          <Route path = "/disciplinasTecnicas/id:" element = {<ListarDisciplinaTecnica />}  />
-          <Route path = "/disciplinasCurriculares/id:" element = {<ListarDisciplinaCurricular />}  />
-      
-          <Route path = "/equipe" element = {<Equipe />} />
-
+          <Route path="/" element={<Home />}/>
+          <Route path="/contato" element={<Contato />}/>
+          <Route path="/sobre" element={<Sobre />}/>
+          <Route path="/tarefas" element={<ListarTarefas />}/>
+          <Route path="/tarefa/:id" element={<ListarUmaTarefa />}/>
+          <Route path="/cadastrarTarefa" element={<CadastrarTarefa />}/>
         </Routes>
-        <Footer />
-      </>
+      </main>
+      <Footer />
     </BrowserRouter>
   );
 }

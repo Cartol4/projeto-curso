@@ -1,73 +1,13 @@
-/*header*/
-
-header{
-  width: 100%;
-  height: 150px;
-background-color:aliceblue;
-display: flex;
-flex-direction: column;
-align-items: center;
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-header .headerTopo{
-  width: 100%;
-  height: 80px;
-}
-
-header .headerMenu{
-  width:100%;
-  height: 40px;
-}
-header .headerMenu ul{
-  list-style:none;
-  display: flex;
-  justify-content: space-around;
-  gap: 5%
-}
-
-header .headerMenu li{
-font-size: 25px;
-}
-
-header .headerMenu li a{
-  color:blue;
-  cursor: pointer;
-}
-
-header .headerMenu li a:hover{
-  color: red;
-
-}
-/*footer*/
-footer{
-  width:100%;
-  height: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color:blue;
-}
-
-Footer .menuFooter{
-width: 20%;
-}
-
-footer .menuFooter ul{
-  list-style: none;
-}
-footer .menuFooter li{
-  font-size: 18px;
-  height: 25px;
-}
-
-
-/**************************************/
-foot
-Footer .credenciais{
-  width:80%;
-  text-align: center;
-}
-footer .credenciais h1{
-  color:brown;
-font-size: 23px;
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
 }
